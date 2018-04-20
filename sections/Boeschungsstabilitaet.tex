@@ -1,0 +1,29 @@
+\section{Böschungsstabilität}
+
+Rutschbewegungen: gerade oder Kreisförmig
+
+\subsection{Methode Culmann}
+	\begin{minipage}{\linewidth}
+		Iteration:
+		\begin{enumerate}
+			\item $ F_{\varphi_0} = \textcolor{red}{1} $
+			\item $ \varphi_m = arctan \frac{tan (\varphi_0)}{\textcolor{red}{F_{\varphi_0}}} $
+			\item $ N_s = \frac{4 sin (\beta) cos \textcolor{red}{(\varphi_m)}}{1 - cos (\beta - \textcolor{red}{\varphi_m})} $
+			\item $ c_m = \frac{\gamma \cdot H}{\textcolor{red}{N_s}} $
+			\item $ F_{c0} = \frac{c}{\textcolor{red}{c_m}} $
+			\item Überprüfen: $ F_{c0} = \textcolor{red}{F_{\varphi_0}} \rightarrow $ wenn ja: i.O, wenn nein: Iteration
+		\end{enumerate}
+	\end{minipage}
+
+
+\subsection{Methode Taylor}
+	\begin{minipage}{\linewidth}
+		genauer als Culmann bei steiler Böschung (Taylor arbeitet mit Bruchkreisen), Berechnung gem. Culmann ausser Schritt 3
+		
+		\hspace{0.5cm} 3. $ N_s $ aus Diagramm $ \rightarrow \frac{1}{N_s} $
+	\end{minipage}
+
+\subsection{Methode Michalowski}
+	\begin{minipage}{\linewidth}
+		Basiert auf unterschiedlicher Bruchform als Taylor \\
+	\end{minipage}
