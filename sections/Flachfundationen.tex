@@ -1,12 +1,43 @@
+
+
+
+	
+
+\begin{minipage}{0.35\linewidth}
 \section{Flachfundationen}
-\begin{minipage}{0.8\linewidth}
 	\subsection{Tragfähigkeit}
-		\begin{tabular}{|l|l|l|}
+		\textbf{Vorgehen}
+		\begin{enumerate}
+			\item Einwirkende Kraft E$_d$ = F$_{z,tot}$
+			\item Bruchspannung $\sigma_f $
+			\item vorhandene Spannung $ \sigma_v = \frac{ F_{z,tot,d} }{ \bar{a} \cdot \bar{b} } $
+			\item Nachweis $ E_d \leq R_d $
+		\end{enumerate}
+%	\includegraphics[width=0.7\linewidth]{images/Flachfun1allgTragfah.PNG}
+\end{minipage}
+\begin{minipage}{\linewidth}
+	\begin{tabular}{l|p{0.2\linewidth}}
+		\multicolumn{2}{c}{\textbf{Statistik} } \\ \hline
+		
+		Mittelwert							&	$ x_m = \frac{1}{n} \sum x_i $	\\
+		
+		Standardabweichung der Stichprobe	& 	$ s = \sqrt{ \frac{1}{n - 1} \sum (x_i - x_m)^2 } $ \\
+		
+		Charakteristischer Wert				&	$ s_{u,k} = \varphi_k' = x_m - \frac{s}{\sqrt{n} } \cdot c $
+												$ \rightarrow$ c-Wert aus Tabelle; $ f = n - 1; p = 1 -\alpha$	\\ 
+		
+		Berechnungswert $ \varphi_d' $		&	$ \varphi_d' = arctan (\frac{tan \varphi_k'}{1.2}) $ \\ \hline
+		
+	\end{tabular}
+\end{minipage}	
+\begin{minipage}{0.8\linewidth}
+	
+		\begin{tabular}{|l|l|p{0.25\linewidth}|}
 			\hline
 			Formel			&	Einheit		&	Bemerkung \\ \hline
 			
 			$ R_n
-			= \bar{a} \cdot \bar{b} \cdot \sigma $ & [kN] & Achtung: Formel gilt für $ d/b \leq 2 $ \\ 
+			= \bar{a} \cdot \bar{b} \cdot \sigma $ & [kN] & Bruchkraft; Achtung: Formel gilt für $ d/b \leq 2 $ \\ 
 			$ \bar{a}
 			= a - 2 \cdot e_a $ &	[m]		& reduzierter QS-Wert	\\
 			$ e_a
@@ -15,8 +46,8 @@
 			= b - 2 \cdot e_b $ &	[m]		& reduzierter QS-Wert	\\
 			$ e_b
 			= \frac{M_x}{F_z} $ &	[m]		& Exzentrizität	\\
-			$ \sigma_{\gamma}
-			= \gamma_2 \cdot \bar{b} \cdot N_b + ( \gamma_1 \cdot d + q ) \cdot N_d + c \cdot N_c $	& $ \left[\frac{kN}{m^3}\right] $ / [kPa]	&	c = Kohäsion \\		\hline
+			$ \sigma_{f}
+			= \gamma_2 \cdot \bar{b} \cdot N_b + ( \gamma_1 \cdot d + q ) \cdot N_d + c \cdot N_c $	& $ \left[\frac{kN}{m^3}\right] $ / [kPa]	& Bruchspannung,	c = Kohäsion \\		\hline
 %			$ N_b
 %			= N_{b0} \cdot \nu_b \cdot \iota_b \cdot \lambda_b \cdot \xi_b $
 %			& $ \left[\frac{kN}{m^3}\right] $		&	\\
@@ -120,21 +151,43 @@
 \end{minipage}
 
 
-\textcolor{red}{Statistik, Berechnungswert $ \varphi_d $, Sicherheitsbeiwerte Geotech}
+\textcolor{red}{Sicherheitsbeiwerte Geotech}
 
 
 
-	\begin{minipage}{\linewidth}
+%	\subsection{Statistik}
+	
+%	\begin{minipage}{\linewidth}
+%		\begin{tabular}{l|p{0.3\linewidth}}
+%			 \hline
+%			Mittelwert							&	$ x_m = \frac{1}{n} \sum x_i $	\\
+%			
+%			Standardabweichung der Stichprobe	& 	$ s = \sqrt{ \frac{1}{n - 1} \sum (x_i - x_m)^2 } $ \\
+%				
+%			Charakteristischer Wert				&	$ f = n - 1; p = 1 -\alpha$; c-Wert aus Tabelle $ \rightarrow s_{u,k} = \varphi_k' = x_m - \frac{s}{\sqrt{n} } \cdot c $	\\ 
+%			
+%			Berechnungswert $ \varphi_d' $		&	$ \varphi_d' = arctan (\frac{tan \varphi_k'}{1.2}) $ \\ \hline
+%						
+%		\end{tabular}
+%	\end{minipage}	
+
+
+
+	\begin{minipage}{0.5\linewidth}
 		\subsection{Gebrauchstauglichkeit}
-	
-	
-
+			\subsubsection{Relative Steifigkeit}
+			$ k = \frac{1}{12} \frac{E}{M_E} \left( \frac{d}{l} \right)^3 $ \\
+		\includegraphics[width=\linewidth]{images/Flachfun5starrschlaff.PNG}
+	\end{minipage}
+	\begin{minipage}{0.3\linewidth}
+		\subsubsection{Spannungstrapezverfahren}
+		\includegraphics[width=\linewidth]{images/Flachfun6Sptrapez.PNG}
 	\end{minipage}
 
 
 
-\begin{minipage}{\linewidth}
-	\begin{tabular}{l|l|l}
-		Formel			&	Einheit	&	Bemerkung \\ \hline
-	\end{tabular}
-\end{minipage}
+%\begin{minipage}{\linewidth}
+%	\begin{tabular}{l|l|l}
+%		Formel			&	Einheit	&	Bemerkung \\ \hline
+%	\end{tabular}
+%\end{minipage}
