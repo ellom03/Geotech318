@@ -213,9 +213,9 @@
 		& 4. erf. benetzte Brunnenmantelfläche $ M_{erf} = \frac{Q_{tot} }{v_{Grenz} } [m^2]$ & \\
 		& 5. Filterhöhe $ h = \frac{M_{erf} }{U_{Brunnen} } $ [m] $ \rightarrow $ Faktor 2 Sicherheit bei Anzahl Brunnen												& \\
 		& 5.1 Anzahl Brunnen $ n = \frac{Q_{tot}}{v_{Grenz} \cdot U_B \cdot h} $	& \\
-		& 6. GW-Spiegelhöhe z an beliebiger Stelle $ z = \sqrt{ H^2 - \frac{Q_{tot} }{\pi \cdot k} [ln(R) - \frac{1}{n} ln(x_i) ] } $								& \\
+		& 6. GW-Spiegelhöhe z an beliebiger Stelle über undurchlässige Schicht $ z = \sqrt{ H^2 - \frac{Q_{tot} }{\pi \cdot k} [ln(R) - \frac{1}{n} ln(x_i) ] } $								& \\
 		& 7. Pumpwassermenge an beliebiger Stelle Q$_{f} = \pi \cdot k \frac{H^2 - z^2 }{ln(R) - \frac{1}{n} ln(x_1 \cdot x_2 \cdot ... x_n) } $					& \\
-		& 8. Pumpwassermenge pro Brunnen Q$_{erf} = \frac{Q_f}{n} $		& Sandfreiheit v < 2.9 $\cdot 10^{-3} $  \\
+		& 8. Pumpwassermenge pro Brunnen Q$_{erf} = \frac{Q_f}{n} $		& Sandfreiheit: $ Q = A_{Filter} v_{Grenz} $ \\
 		
 	\end{tabular}
 \end{minipage}
@@ -248,11 +248,12 @@
 			\item $ Q = k \cdot H \cdot \frac{N_f}{N_d} $ [ $ \frac{m^3}{s \cdot m^l} $ ]
 			\item Wasserdruck/Piezometer: $ h = H - \frac{H}{N_d} \cdot n $ [m] $ \rightarrow \cdot 10 = u [\frac{kN}{m^2}] $; wobei n = Anzahl Felder
 			\item Auftrieb: $ A = u \cdot L \cdot B $ [kN]
+			\item Nachweis: $ 1.1 \cdot A \leq G $
 		\end{itemize}
 	
 \end{minipage}
 \begin{minipage}{0.4\linewidth}
-	\includegraphics[width=\linewidth]{images/GW17Sickernetz.PNG}
+	\includegraphics[width=\linewidth]{images/GW17Sickernetz.jpg}
 \end{minipage}
 
 
@@ -268,9 +269,11 @@
 		\multicolumn{3}{c}{\textbf{Strömungsdruck} } \\ \hline
 		
 		Strömungsgradient &	$ i_{vorh} = \frac{\Delta H}{t} $	& $\Delta$ H: Absenkung GW [m] \\
-					&					& t: Einbindetiefe [m] \\
+					&	$ i_{vorh,isotrop} = \frac{\Delta H}{\Delta H + 2 \cdot t} $				& t: Einbindetiefe [m] \\
 					&	$ i_{krit} = \frac{\gamma'}{\gamma_w} $	& \\
-		Sicherheit  &	$ F = \frac{i_{krit} }{i_{vorh} } $	& auflösen nach t [m] \\ \hline
+		Sicherheit  &	$ F = \frac{i_{krit} }{i_{vorh} } $	& auflösen nach t [m] \\ 
+					&	& F$_H$ $\geq$ 4.5 $\rightarrow$ Isotroper Boden \\ 
+					&	& F$_H$ $\geq$ 1.5 $\rightarrow$ Anisotroper Boden \\ \hline
 		
 		Einbindetiefe anisotropisches Zuströmen neues Konzept nach SIA 267 &	$ \gamma' \cdot \gamma_{G,inf} \geq \gamma_w \cdot i_{vorh} \cdot \gamma_{G,sup} $	& $\gamma_{G}$: Sia 260, Tab. 1	\\
 		
@@ -278,9 +281,9 @@
 		
 		Effektive Spannung & $ \sigma_v' = \sigma_v - u = \sigma_{v,0}' + \Delta u $	& \\
 		
-		Gewicht Bodenelement unter Auftrieb & $ G = \gamma' \cdot V $	& \\
+		Gewicht Bodenelement unter Auftrieb & $ G = \gamma' \cdot A $	& \\
 		
-		Strömungskraft	& $ S = \gamma_w \cdot i \cdot V $	& \\
+		Strömungskraft	& $ S = \gamma_w \cdot i \cdot A $	& \\
 		
 		Resultierende Auf-/Abwärtsströmung & $ R = (\gamma' \pm \gamma_w \cdot i) \cdot V $	& \\ \hline
 		
@@ -310,4 +313,4 @@
 %	\includegraphics[width=\linewidth]{images/GW20Wasserdrucke.PNG}
 	\includegraphics[width=0.5\linewidth]{images/GW21Kraftwirkung.PNG}
 \end{minipage}
-	\includegraphics[width=0.9\linewidth]{images/GW20Wasserdrucke.PNG}
+	\includegraphics[width=0.8\linewidth]{images/GW20Wasserdrucke.PNG}
